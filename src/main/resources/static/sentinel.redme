@@ -1,0 +1,3 @@
+sentinel控制台启动步骤：
+1、先找一个jre，将sentinel-dashboard-1.8.1.jar、start.bat、jre包三个放在同一个文件夹下
+2、启动bat文件
