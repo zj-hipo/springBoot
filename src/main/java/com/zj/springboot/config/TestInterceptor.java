@@ -1,4 +1,4 @@
-package com.zj.springboot.Config;
+package com.zj.springboot.config;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
