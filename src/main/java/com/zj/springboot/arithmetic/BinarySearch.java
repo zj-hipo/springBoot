@@ -32,5 +32,6 @@ public class BinarySearch {
         int resultNumber2=binarySearch.biSearch(number2,66);
         System.out.println(number[resultNumber-1]);
         System.out.println(number[resultNumber2-1]);
+
     }
 }

@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.concurrent.ThreadLocalRandom;
+/**
+ *阿里巴巴sentinel熔断器
+ */
 
 @Controller
 @RequestMapping("sentinel")

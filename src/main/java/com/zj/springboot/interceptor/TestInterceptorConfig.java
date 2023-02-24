@@ -1,10 +1,17 @@
-package com.zj.springboot.config;
+package com.zj.springboot.interceptor;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+
+/**
+ *  作用：@Configuration的作用：由普通类型转变为cglib代理类型，后会生成cglib代理对象，通 过代理对象的方法拦截器,
+ *  可以解决AppConﬁg内部方法bean之间发生依赖调用的时候从容器中去获取，避免了多例的出现
+ *  WebMvcConfigurer：
+ */
 
 @Configuration
 public class TestInterceptorConfig implements WebMvcConfigurer {

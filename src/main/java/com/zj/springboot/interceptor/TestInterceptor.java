@@ -1,4 +1,4 @@
-package com.zj.springboot.config;
+package com.zj.springboot.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -23,10 +23,11 @@ public class TestInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         JSONObject body=new JSONObject();
-        Map<String,Object> map=new HashMap<>();
+        Map<String,Object> map=new HashMap<>(16);
         String userId=request.getHeader("userId");
         //拦截请求。不是A800000的用户不让登录，/**/login结尾的请求除外
-        if (!"A800000".equals(userId)) {
+        String USER_KEY="A800000";
+        if (!USER_KEY.equals(userId)) {
             response.setHeader("Content-type", "text/html;charset=UTF-8");
             response.setCharacterEncoding("UTF-8");
             Writer writer=response.getWriter();

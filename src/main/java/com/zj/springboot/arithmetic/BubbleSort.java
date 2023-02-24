@@ -14,7 +14,9 @@ import java.util.Arrays;
 public class BubbleSort {
     public static  void bubbleSorting(int[] array){
         for (int i = 0; i <array.length-1 ; i++) {
+            System.out.println(i+"@@@@@@@"+(array.length-1));
             for (int j = 0; j <array.length-1-i ; j++) {
+                System.out.println(array[j]+"对比"+array[j+1]);
                 if (array[j]>array[j+1]) {
                     int temp=array[j];
                     array[j]=array[j+1];
