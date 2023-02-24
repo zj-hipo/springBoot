@@ -1,5 +1,7 @@
 package com.zj.springboot.other;
 
+import com.zj.springboot.listener.LoginEvent;
+import com.zj.springboot.listener.SpringContextHolder;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +18,6 @@ public class PostConstructDemo {
     public PostConstructDemo() {
         System.out.println("=========Spring容器加载PostConstructDemo类==========");
     }
-
     @PostConstruct
     public void init(){
         System.out.println("=========随类加载==================");
@@ -24,8 +25,7 @@ public class PostConstructDemo {
     public void doDemo(){
         System.out.println("普通方法");
     }
-    public static void main(String[] args) {
-        PostConstructDemo postConstructDemo=new PostConstructDemo();
-        postConstructDemo.doDemo();
+    public static void execute(){
+        System.out.println("===========static方法加载===========");
     }
 }
