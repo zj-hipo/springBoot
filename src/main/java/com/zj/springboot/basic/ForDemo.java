@@ -12,18 +12,19 @@ import org.slf4j.Logger;
 public class ForDemo {
     public static void breakDemo(){
         for (int i = 0; i <20 ; i++) {
-            System.out.println("单循环break测试："+i);
+
             if (i == 5) {
                 break;
             }
+            System.out.println("单循环break测试："+i);
         }
         for (int i = 1; i <10; i++) {
             for (int j = 1; j < 10; j++) {
-                System.out.println("双循环break测试："+j*i);
+
                 if (j == 5) {
                     break;
                 }
-
+                System.out.println("双循环break测试："+"j:"+j+"... i:"+i);
             }
 
         }
@@ -39,17 +40,18 @@ public class ForDemo {
         for (int i = 1; i <5; i++) {
             for (int j = 1; j < 6; j++) {
 
-                if (j == 5) {
+                if (j == 2) {
                     continue;
                 }
-                System.out.println("双循环continue测试："+j*i);
+                System.out.println("双循环continue测试："+"j:"+j+"... i:"+i);
             }
 
         }
 
     }
+    
 
     public static void main(String[] args) {
-        ForDemo.continueDemo();
+        ForDemo.breakDemo();
     }
 }

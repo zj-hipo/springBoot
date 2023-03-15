@@ -25,7 +25,9 @@ public class StringDemo {
         }
         buffer.append(s7);
         buffer.append("\"");
+        String s8=s6.replace("\"","\"\"");
         System.out.println("加双引号并转义："+buffer);
+        System.out.println("s8: "+s8);
 
 
         //分割字符串
@@ -36,10 +38,26 @@ public class StringDemo {
         String[] arr=blank.split("\"");
         for (int i = 0; i <arr.length ; i++) {
             String result=arr[i];
-            
+
             System.out.println("字符："+arr[i]);
 
         }
+
+        /**
+         * 截取字符串
+         */
+        String date="basic202303";
+        String dateType="2023-03-08";
+        System.out.println(date.substring(date.length()-6));
+        System.out.println(dateType.replace("-","").substring(0,6));
+        /**
+         * 字符串的比较
+         */
+        String a="202303";
+        String b="202304";
+        Integer.parseInt(a);
+        Integer.parseInt(b);
+        System.out.println(Integer.parseInt(a)>Integer.parseInt(b));
 
 
     }

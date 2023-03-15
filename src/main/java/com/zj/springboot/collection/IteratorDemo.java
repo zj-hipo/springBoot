@@ -28,5 +28,6 @@ public class IteratorDemo {
        //此处falg为false，代表集合里没有元素了(其实是指针指向了空，元素还存在，重新创建一个迭代器，还是能获取元素的)
         Boolean flag = iterable.hasNext();
         System.out.println(false);
+
     }
 }
